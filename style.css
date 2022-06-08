@@ -1,0 +1,203 @@
+*,
+::after,
+::before{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 30px auto;
+    display:flex;
+    /*padding-right: 300px;*/
+    /* background-image: url("image/pattern1.png"); */
+}
+
+
+.section1{
+    flex: 1 0 auto;
+    /* max-width: 180px; */
+    /* flex-grow: 1; */
+    width: 25%;
+    overflow: hidden;
+    z-index: -10px;
+}
+
+.section1 .nav{
+    left: 5%;
+    top: 30%;
+    position: fixed;
+    width: 25%;
+    padding: 0 50px 0 0;
+}
+
+.section2{
+    flex: 1 0 auto;
+    /* max-width: 980px; */
+    overflow: hidden;
+    width: 75%;
+    /* flex-grow: 2; */
+}
+
+.prolog{
+    padding: 20px 20px;
+}
+
+.main{
+    padding: 20px 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+.glava{
+    padding: 15px 0;
+}
+
+.tire {
+    list-style: none;
+}
+  
+.tire li:before {
+    content: "–";
+    position: relative;
+    left: -5px;
+}
+
+img{
+height: 100%;
+    width: 100%;
+}
+
+.rounded {
+    counter-reset: li; 
+    list-style: none; 
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.rounded a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #313f1b41;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.rounded a:hover {background: #585833;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8b8b8b;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid rgb(29, 27, 27);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+.glava img {
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition: 0.8s;
+  }
+  
+  .glava img:hover {
+    opacity: 1;
+  }
+
+  body {
+    background-image: url("image/pattern1.png");
+    font-family: "Tapestry", cursive;
+  }
+
+  .glava:nth-child(2n) {
+    background-color: rgba(41, 55, 37, 0.521);
+    border-radius: 5px 5px 5px 5px ;
+  }
+  
+  .glava:nth-child(2n + 1) {
+    background-color: rgba(164, 164, 164, 0.509);
+    border-radius: 10px 10px 10px 10px;
+  }
+
+.cont{
+    padding: 10px;
+}
+
+.wrapper form input[type="text"]:hover,.wrapper form input[type="text"]:focus{
+    outline: 2px solid rgb(17, 255, 0);
+    border-radius: 3px;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.577);
+    padding: 20px 20px;
+    border-radius: 15px;
+    margin: 0 20px;
+    
+}
+
+.footer p{
+    text-align: center;
+    padding: 0 0 10px 0;
+    color: white;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    margin: 0 15px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: rgba(57, 84, 57, 0.696);
+    color: black;
+    font-weight: bold;
+}
+
+.but{
+    margin: 10px 10px;
+    padding: 10px 10px;
+    transition: 0.8s;
+}
+
+.but:hover{
+    border-radius: 50px;
+    opacity: 0.8;
+    /* font-size: 16px; */
+    background-color: black;
+    color: white;
+}
+.iam{
+    text-align: center;
+    padding: 15px 0 0 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 320px) { 
+    .section1 {
+        display: none;
+    }
+}
